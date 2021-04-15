@@ -8,22 +8,22 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.stereotype.Component;
 
 @SpringBootApplication
 public class OnlineStoreEngineApplication {
 
-	@Autowired
-	private UserEntityRepository userEntityRepository;
+
 
 	public static void main(String[] args) { SpringApplication.run(OnlineStoreEngineApplication.class, args); }
 
-	@EventListener(ApplicationReadyEvent.class)
-	public void testRepository(){
-		UserEntity u = new UserEntity();
-		u.setAddress("address");
-		u.setName("name");
-		u.setPhone("phone");
-		u.setEmail("email");
-		userEntityRepository.save(u);
+//	@EventListener(ApplicationReadyEvent.class)
+//	public void testRepository(){
+//		UserEntity u = new UserEntity();
+//		u.setAddress("address");
+//		u.setName("name");
+//		u.setPhone("phone");
+//		u.setEmail("email");
+//		userEntityRepository.save(u);
 	}
-}
+
