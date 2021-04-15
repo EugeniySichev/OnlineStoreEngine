@@ -5,7 +5,7 @@ import lombok.Data;
 import javax.persistence.*;
 import java.math.BigDecimal;
 
-@Table(name ="product_table")
+@Table(name = "product_table")
 @Entity
 @Data
 public class ProductEntity extends BaseEntity{

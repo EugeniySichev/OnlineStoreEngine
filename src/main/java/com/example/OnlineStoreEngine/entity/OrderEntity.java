@@ -1,6 +1,7 @@
 package com.example.OnlineStoreEngine.entity;
 
 import lombok.Data;
+import lombok.ToString;
 
 import javax.persistence.*;
 
@@ -14,7 +15,7 @@ public class OrderEntity extends BaseEntity{
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    UserEntity userEntity;
+    private UserEntity userEntity;
 
     @ManyToOne
     @JoinColumn(name = "purchase_item_id")

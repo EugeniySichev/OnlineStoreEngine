@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Table(name = "user_table")
 @Entity
 @Data
-@ToString
+@ToString(exclude = "password")
 public class UserEntity extends BaseEntity{
 
     @Column
@@ -33,5 +33,4 @@ public class UserEntity extends BaseEntity{
 
     @Column
     private String address;
-
 }
