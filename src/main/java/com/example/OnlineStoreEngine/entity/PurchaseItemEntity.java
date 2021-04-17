@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Table(name = "purchase_item_table")
 @Entity
 @Data
-public class PurchaseItemEntity extends BaseEntity{
+public class PurchaseItemEntity extends BaseEntity {
 
     @Column
     private Integer count;
@@ -15,4 +15,8 @@ public class PurchaseItemEntity extends BaseEntity{
     @ManyToOne
     @JoinColumn(name = "product_id")
     private ProductEntity productEntity;
+
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    private OrderEntity orderEntity;
 }

@@ -1,4 +1,4 @@
-package com.example.OnlineStoreEngine.dto;
+package com.example.OnlineStoreEngine.controller.dto;
 
 import lombok.Data;
 

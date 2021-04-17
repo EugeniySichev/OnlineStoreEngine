@@ -1,17 +1,16 @@
 package com.example.OnlineStoreEngine.entity;
 
+import com.javamaster.entity.enums.UserStatus;
 import lombok.Data;
 import lombok.ToString;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Table(name = "user_table")
 @Entity
 @Data
 @ToString(exclude = "password")
-public class UserEntity extends BaseEntity{
+public class UserEntity extends BaseEntity {
 
     @Column
     private String name;
@@ -29,8 +28,13 @@ public class UserEntity extends BaseEntity{
     private String password;
 
     @Column
-    private String role;
+    @Enumerated(EnumType.STRING)
+    private UserRole role;
 
     @Column
     private String address;
+
+//    @Column
+//    @Enumerated(EnumType.STRING)
+//    private UserStatus status;
 }

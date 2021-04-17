@@ -1,2 +1,5 @@
-package com.example.OnlineStoreEngine.entity;public class UserRole {
+package com.example.OnlineStoreEngine.entity;
+
+public enum UserRole {
+    CUSTOMER, MANAGER
 }
